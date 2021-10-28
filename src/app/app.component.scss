@@ -23,9 +23,6 @@ div.border-top {
 #produtos {
   color: white;
   background-color: #414040;
-  h2.mat-display-1 {
-    margin-top: 128px;
-  }
 }
 svg.svg-inline--fa {
   height: 52px;
@@ -54,6 +51,9 @@ svg.svg-inline--fa {
   }
   svg.svg-inline--fa {
     height: 96px;
+  }
+  #produtos h2.mat-display-1 {
+    margin-top: 128px;
   }
 }
 
