@@ -11,7 +11,6 @@
   color: white;
   background-color: #414040;
   h2.mat-display-1 {
-    margin-bottom: 8px;
     color: white;
   }
   p.lead {
@@ -26,6 +25,10 @@ svg.svg-inline--fa {
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
   #heroes {
     min-height: 512px;
     background: url(../../../assets/luz.jpg) no-repeat;
@@ -49,10 +52,6 @@ svg.svg-inline--fa {
   #produtos h2.mat-display-1 {
     margin-top: 128px;
   }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
 }
 
 // Large devices (desktops, 992px and up)
