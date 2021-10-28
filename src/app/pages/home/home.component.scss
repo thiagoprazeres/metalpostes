@@ -1,0 +1,71 @@
+#heroes {
+  background-color: #dc4c12;
+  .lead {
+    color: white;
+  }
+}
+#marketing {
+  background-color: #d2d3d5;
+}
+#produtos {
+  color: white;
+  background-color: #414040;
+  h2.mat-display-1 {
+    margin-bottom: 8px;
+    color: white;
+  }
+  p.lead {
+    color: whitesmoke;
+  }
+}
+svg.svg-inline--fa {
+  height: 52px;
+}
+// X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  #heroes {
+    min-height: 512px;
+    background: url(../../../assets/luz.jpg) no-repeat;
+    background-size: 66% auto;
+    background-position: right;
+    div.bg {
+      background: url(../../../assets/bg.svg) no-repeat;
+      background-size: auto 100%;
+      background-position: left;
+      div.row {
+        min-height: 512px;
+      }
+    }
+    .lead {
+      color: white;
+    }
+  }
+  svg.svg-inline--fa {
+    height: 96px;
+  }
+  #produtos h2.mat-display-1 {
+    margin-top: 128px;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  #heroes .lead {
+    width: 400px;
+  }
+}
