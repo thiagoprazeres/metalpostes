@@ -1,18 +1,19 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '~@angular/material' as mat;
-$primary: #DC4C12;
-$warning: #FFA900;
+@use "~@angular/material" as mat;
+$primary: #dc4c12;
+$warning: #ffa900;
+$dark: #201e1e;
 $theme-colors: (
   "primary": $primary,
-  "warning": $warning
+  "warning": $warning,
+  "dark": $dark,
 );
 // Plus imports for other components in your app.
 @import "~bootstrap/scss/bootstrap";
 
 $neuzeit-typography: mat.define-typography-config(
-  $font-family: 'Neuzeit S LT Std',
+  $font-family: "Neuzeit S LT Std",
 );
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -20,24 +21,92 @@ $neuzeit-typography: mat.define-typography-config(
 // Be sure that you only ever include this mixin once!
 @include mat.core($neuzeit-typography);
 
+/* For use in src/lib/core/theming/_palette.scss */
+$md-flame: (
+  50: #fbeae3,
+  100: #f5c9b8,
+  200: #eea689,
+  300: #e78259,
+  400: #e16736,
+  500: #dc4c12,
+  600: #d84510,
+  700: #d33c0d,
+  800: #ce330a,
+  900: #c52405,
+  A100: #fff0ee,
+  A200: #ffc3bb,
+  A400: #ff9588,
+  A700: #ff7f6f,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$md-chrome-yellow: (
+  50: #fff5e0,
+  100: #ffe5b3,
+  200: #ffd480,
+  300: #ffc34d,
+  400: #ffb626,
+  500: #ffa900,
+  600: #ffa200,
+  700: #ff9800,
+  800: #ff8f00,
+  900: #ff7e00,
+  A100: #ffffff,
+  A200: #fff8f2,
+  A400: #ffdbbf,
+  A700: #ffcda6,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$metalpostes-primary: mat.define-palette(mat.$indigo-palette);
-$metalpostes-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$metalpostes-primary: mat.define-palette($md-flame);
+$metalpostes-accent: mat.define-palette($md-chrome-yellow);
 
 // The warn palette is optional (defaults to red).
 $metalpostes-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$metalpostes-theme: mat.define-light-theme((
-  color: (
-    primary: $metalpostes-primary,
-    accent: $metalpostes-accent,
-    warn: $metalpostes-warn,
+$metalpostes-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $metalpostes-primary,
+      accent: $metalpostes-accent,
+      warn: $metalpostes-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -46,20 +115,27 @@ $metalpostes-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-  font-family: 'Neuzeit S LT Std';
+  font-family: "Neuzeit S LT Std";
   font-style: normal;
   font-weight: 300;
   font-display: swap;
-  src: url(assets/fonts/NeuzeitSLTStd-Book.otf) format('opentype');
+  src: url(assets/fonts/NeuzeitSLTStd-Book.otf) format("opentype");
 }
 /* cyrillic */
 @font-face {
-  font-family: 'Neuzeit S LT Std';
+  font-family: "Neuzeit S LT Std";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(assets/fonts/NeuzeitSLTStd-BookHeavy.otf) format('opentype');
+  src: url(assets/fonts/NeuzeitSLTStd-BookHeavy.otf) format("opentype");
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: "Neuzeit S LT Std"; background-color: #201E1E; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Neuzeit S LT Std";
+  background-color: #201e1e;
+}
