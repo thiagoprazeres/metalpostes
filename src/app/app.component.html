@@ -1,22 +1,22 @@
 <header>
   <nav class="navbar navbar-dark navbar-expand-lg bg-dark mat-elevation-z3">
     <div class="container">
-      <a class="navbar-brand" href="#"><b>METAL</b>POSTES</a>
+      <a class="navbar-brand" routerLink="/"><b>METAL</b>POSTES</a>
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
+        data-bs-target="#navbarToggler"
+        aria-controls="navbarToggler"
         aria-expanded="false"
         aria-label="Alternar de navegação"
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse navbar-collapse" id="navbarToggler">
         <ul class="navbar-nav ms-md-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link" routerLink="/sobre-nos" (click)="fecha()">
               Sobre nós
             </a>
           </li>
