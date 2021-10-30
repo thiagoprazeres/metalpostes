@@ -139,3 +139,39 @@ body {
   font-family: "Neuzeit S LT Std";
   background-color: #201e1e;
 }
+
+main {
+  background-color: whitesmoke;
+  #jumbotron {
+    background-color: #dc4c12;
+    h1 {
+      color: white;
+    }
+    h2 {
+      color: whitesmoke;
+      line-height: normal;
+    }
+  }
+  p {
+    color: black;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  #jumbotron {
+    background: url(assets/luz.jpg) no-repeat;
+    background-size: 66% auto;
+    background-position: right;
+    div.bg {
+      background: url(assets/bg.svg) no-repeat;
+      background-size: auto 512px;
+      background-position: left center;
+      h2 {
+        width: 33%;
+        color: whitesmoke;
+        line-height: normal;
+      }
+    }
+  }
+}
