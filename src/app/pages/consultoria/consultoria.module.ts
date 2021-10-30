@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { ConsultoriaRoutingModule } from './consultoria-routing.module';
 import { ConsultoriaComponent } from './consultoria.component';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { ConsultoriaComponent } from './consultoria.component';
   ],
   imports: [
     CommonModule,
-    ConsultoriaRoutingModule
+    ConsultoriaRoutingModule,
+    MatListModule,
+    MatIconModule
   ]
 })
 export class ConsultoriaModule { }
