@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { AcessoriosRoutingModule } from './acessorios-routing.module';
 import { AcessoriosComponent } from './acessorios.component';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { AcessoriosComponent } from './acessorios.component';
   ],
   imports: [
     CommonModule,
-    AcessoriosRoutingModule
+    AcessoriosRoutingModule,
+    MatListModule,
+    MatIconModule
   ]
 })
 export class AcessoriosModule { }
