@@ -157,12 +157,29 @@ main {
   }
 }
 
+table {
+  width: 100%;
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  th {
+    background-color: #fec12c;
+    border: 1px solid whitesmoke;
+    padding: 4px;
+  }
+  .th-codigo {
+    background-color: #ef4e36;
+  }
+}
+
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   #jumbotron {
     background: url(assets/luz.jpg) no-repeat;
     background-size: 66% auto;
     background-position: right;
+    h1 {
+      width: 33%;
+    }
     div.bg {
       background: url(assets/bg.svg) no-repeat;
       background-size: auto 512px;
