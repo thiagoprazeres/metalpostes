@@ -165,9 +165,14 @@ table {
     background-color: #fec12c;
     border: 1px solid whitesmoke;
     padding: 4px;
+    text-transform: uppercase;
   }
   .th-codigo {
     background-color: #ef4e36;
+  }
+  tbody > tr > td:first-child {
+    text-align: left;
+    padding-left: 10px;
   }
 }
 
